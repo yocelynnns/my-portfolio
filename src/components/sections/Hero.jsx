@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import ShinyText from "../ShinyText/ShinyText";
 import BlurText from "../effects/BlurText";
+import IU from "/src/assets/IU.jpg"
 
 const HERO = {
   name: "Yocelyn Theona Setiawan",
@@ -130,7 +131,7 @@ export default function Hero() {
             >
               {/* Replace placeholder with your actual image */}
               <img
-                src={HERO.avatar}
+                src={IU}
                 alt="Portrait of Yocelyn Theona Setiawan"
                 className="w-full h-full object-cover"
               />
