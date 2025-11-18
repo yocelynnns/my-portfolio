@@ -1,0 +1,22 @@
+/* Base styles & smooth scrolling */
+@import "tailwindcss";
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+:root {
+  --primary: #ff6b8b;
+  --secondary: #7ed6df;
+  --accent: #ffd166;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure each section fills the screen */
+section {
+  min-height: 100vh;
+  padding-top: 80px; /* navbar height offset */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

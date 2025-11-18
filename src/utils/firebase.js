@@ -13,11 +13,11 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+export const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
-const db = getFirestore(app);
+export const db = getFirestore(app);
 
-const loginWithGoogle = () => signInWithPopup(auth, provider);
-const logout = () => signOut(auth);
+export const loginWithGoogle = () => signInWithPopup(auth, provider);
+export const logout = () => signOut(auth);
 
-export { auth, db, loginWithGoogle, logout };
+export default app;

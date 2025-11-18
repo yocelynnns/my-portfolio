@@ -1,0 +1,67 @@
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ff6b8b, #7ed6df);
+  border-radius: 10px;
+}
+
+/* Custom pink scrollbar for chat room */
+.custom-scrollbar {
+  overflow-y: auto !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: #f9a8d4 #fce7f3 !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #fce7f3 !important;
+  border-radius: 8px !important;
+  margin: 4px 0 !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #f9a8d4 !important;
+  border-radius: 8px !important;
+  border: 2px solid #fce7f3 !important;
+  min-height: 40px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #f472b6 !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:active {
+  background-color: #ec4899 !important;
+}
+
+/* Mobile-specific enhancements */
+@media (max-width: 768px) {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px !important;
+    height: 8px !important;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #f472b6 !important;
+    border: 1px solid #fce7f3 !important;
+  }
+}
+
+/* Force WebKit to show scrollbar */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .custom-scrollbar {
+    overflow-y: scroll !important;
+  }
+}

@@ -1,0 +1,1 @@
+export const categories = ["All", "Web Dev", "Algorithms", "Games", "Full Stack", "Tools"];
