@@ -43,12 +43,10 @@ export default function Projects() {
         
         {/* Projects Grid */}
         <ProjectsGrid 
-          projects={displayProjects}  // Pass the already-filtered displayProjects
+          projects={filteredProjects} 
           onProjectClick={setSelectedProject}
           setActiveFilter={setActiveFilter}
           activeFilter={activeFilter}
-          showAllProjects={showAllProjects}  // Pass these down
-          setShowAllProjects={setShowAllProjects}
         />
         
         <ProjectsCTA />

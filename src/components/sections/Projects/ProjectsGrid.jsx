@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
 
-export default function ProjectsGrid({ projects, onProjectClick, setActiveFilter, activeFilter, showAllProjects, setShowAllProjects }) {
+export default function ProjectsGrid({ projects, onProjectClick, setActiveFilter, activeFilter }) {
+  const [showAllProjects, setShowAllProjects] = useState(false);
+
+  // Reset showAll when filter changes
+  React.useEffect(() => {
+    setShowAllProjects(false);
+  }, [activeFilter]);
+
+  // Show only 5 projects for "All" category unless "More Projects" is clicked
+  const displayProjects = activeFilter === "All" && !showAllProjects 
+    ? projects.slice(0, 5) 
+    : projects;
+
   if (projects.length === 0) {
     return (
       <div className="text-center py-20" data-aos="fade-up">
@@ -21,7 +33,7 @@ export default function ProjectsGrid({ projects, onProjectClick, setActiveFilter
     <>
       <div className="max-w-7xl mx-auto">
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project, index) => (
+          {displayProjects.map((project, index) => (
             <ProjectCard 
               key={index} 
               project={project} 
