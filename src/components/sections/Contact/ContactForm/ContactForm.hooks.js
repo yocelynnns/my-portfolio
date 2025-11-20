@@ -19,8 +19,8 @@ export function useContactForm() {
         'service_npomasx',
         'template_qu6dl7q',
         {
-          from_name: form.name,
-          from_email: form.email,
+          name: form.name,
+          email: form.email,
           message: form.message,
           to_email: 'ytheonas05@gmail.com'
         },

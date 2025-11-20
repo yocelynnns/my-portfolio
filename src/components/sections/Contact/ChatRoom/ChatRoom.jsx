@@ -62,7 +62,7 @@ export default function ChatRoom({ user, setLoginError, loginError }) {
       {user && <UserHeader user={user} />}
 
       {/* Messages Container */}
-      <div className="flex-1 flex flex-col max-h-40">
+      <div className={`flex-1 flex flex-col ${user ? 'max-h-80' : 'max-h-40'}`}>
         <div className="flex-1 overflow-y-scroll border border-gray-200 rounded-2xl bg-white/50 p-4 space-y-4 scroll-smooth custom-scrollbar">
           {messages.length === 0 ? (
             <div className="text-center py-12">

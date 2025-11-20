@@ -1,30 +1,26 @@
 export const timelineData = [
   { 
-    year: "2023-Present", 
+    year: "2024-Present", 
     title: "42 Singapore", 
-    description: "Intensive peer-to-learning program focusing on C, C++, algorithms, and software engineering fundamentals",
+    description: 
+      "Full-time software engineering program focusing on C, C++, algorithms, systems programming, and building large-scale projects like Minishell, Cub3D, Inception, Webserv, and Transcendence.",
     icon: "🇸🇬",
     color: "from-blue-500 to-cyan-500"
   },
   { 
-    year: "2022-2023", 
+    year: "2023-2024", 
     title: "Politeknik Negeri Batam", 
-    description: "Software Engineering studies with comprehensive web development and programming curriculum",
+    description: 
+      "Software Engineering diploma program. Built my first real applications such as PBLog and TrackYourMoney, and learned PHP, MySQL, HTML, CSS, JavaScript, and basic MVC architecture.",
     icon: "🎓",
     color: "from-purple-500 to-pink-500"
   },
   { 
-    year: "2021-2022", 
-    title: "Web Development Journey", 
-    description: "Built multiple full-stack applications and explored modern web technologies",
+    year: "2022-2023", 
+    title: "Programming Beginnings", 
+    description: 
+      "Discovered programming through self-study on YouTube and online tutorials. Learned basic HTML and CSS.",
     icon: "💻",
     color: "from-green-500 to-teal-500"
-  },
-  { 
-    year: "2020-2021", 
-    title: "Coding Foundations", 
-    description: "Started learning programming fundamentals and discovered passion for technology",
-    icon: "🔰",
-    color: "from-orange-500 to-red-500"
   }
 ];

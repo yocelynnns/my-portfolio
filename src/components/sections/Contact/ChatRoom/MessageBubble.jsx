@@ -11,18 +11,22 @@ export default function MessageBubble({ msg, user, onDelete }) {
 
   return (
     <div 
-      className={`flex gap-3 group ${isSender ? "justify-end" : "justify-start"}`}
+      className={`flex items-start gap-3 group ${isSender ? "justify-end" : "justify-start"}`}
       onMouseEnter={() => setShowTime(true)}
       onMouseLeave={() => setShowTime(false)}
     >
+      {/* Avatar for received messages */}
       {!isSender && (
-        <img
-          src={msg.photoURL || "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face"}
-          alt="avatar"
-          className="w-10 h-10 rounded-2xl shrink-0 border-2 border-white shadow-md"
-        />
+        <div className="shrink-0">
+          <img
+            src={msg.photoURL || "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face"}
+            alt="avatar"
+            className="w-10 h-10 rounded-2xl border-2 border-white shadow-md"
+          />
+        </div>
       )}
 
+      {/* Message content */}
       <div className="flex flex-col gap-1 max-w-[70%]">
         {!isSender && (
           <div className="text-xs text-gray-500 font-medium px-2">{msg.displayName}</div>
@@ -36,7 +40,7 @@ export default function MessageBubble({ msg, user, onDelete }) {
                 : "bg-white text-gray-800 rounded-bl-md border border-gray-200 shadow-sm"
             }`}
           >
-            <div className="wrap-break-words">{msg.text}</div>
+            <div className="wrap-break-word whitespace-pre-wrap">{msg.text}</div>
           </div>
 
           {/* Time Tooltip */}
@@ -61,12 +65,15 @@ export default function MessageBubble({ msg, user, onDelete }) {
         </div>
       </div>
 
+      {/* Avatar for sent messages */}
       {isSender && (
-        <img
-          src={msg.photoURL || "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face"}
-          alt="avatar"
-          className="w-10 h-10 rounded-2xl shrink-0 border-2 border-white shadow-md"
-        />
+        <div className="shrink-0">
+          <img
+            src={msg.photoURL || "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face"}
+            alt="avatar"
+            className="w-10 h-10 rounded-2xl border-2 border-white shadow-md"
+          />
+        </div>
       )}
     </div>
   );
