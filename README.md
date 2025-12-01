@@ -3,7 +3,7 @@
 A modern, responsive portfolio website built with React and Tailwind CSS, featuring interactive animations, real-time chat functionality, and a showcase of software engineering projects.
 
 ## ✨ Live Demo
-[![Portfolio Demo](https://img.shields.io/badge/🚀-Live_Demo-9B5DE5?style=for-the-badge)](https://github.com/yocelynnns/portfolio)  
+[![Portfolio Demo](https://img.shields.io/badge/🚀-Live_Demo-9B5DE5?style=for-the-badge)](https://yocelynnns.github.io/my-portfolio)
 
 ## 🎯 Features
 
