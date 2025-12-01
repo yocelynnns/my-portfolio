@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import IU from "/src/assets/IU.jpg";
+import YOCE from "/src/assets/yoce.jpg";
 
 export default function HeroAvatar() {
   const avatarRef = useRef(null);
@@ -35,7 +35,7 @@ export default function HeroAvatar() {
         onMouseLeave={handleMouseLeave}
       >
         <img
-          src={IU}
+          src={YOCE}
           alt="Portrait of Yocelyn Theona Setiawan"
           className="w-full h-full object-cover"
         />
